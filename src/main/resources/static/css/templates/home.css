@@ -1,0 +1,379 @@
+@charset "UTF-8";
+
+
+body {
+	/* background-color: #F2F2F2; */
+}
+
+.container-fluid .barra {
+	/* width: 100% !important; */
+/* 	background-color: #003D73; Cor original*/
+/* 	background-color: #1F486C; */
+	background-image: linear-gradient(#294B68 90%, #F3F6F8 );
+	height: 3.4em;
+	max-height: 5em !important;
+	align-items: center;
+	margin-bottom: 1em;
+	color: #99aec1;
+	
+	
+}
+
+.barra .titulo-barra {
+	
+	/* impedir seleção do mouse */
+	-webkit-touch-callout: none;  /* iPhone OS, Safari */
+    -webkit-user-select: none;    /* Chrome, Safari 3 */
+    -khtml-user-select: none;     /* Safari 2 */
+    -moz-user-select: none;       /* Firefox */
+    -ms-user-select: none;        /* IE10+ */
+    user-select: none;            /* Possível implementação no futuro */
+	
+}
+
+.container-interno {
+	width: 100%;
+	margin-right: 100px;
+	border: 1px solid red;
+ 	
+}
+
+.container-calendario {
+/* 	border: 1px solid gray; */
+/* 	background-color: #DcDcDc; fundo interno do calendário */
+	background-color: #FDFDFD;
+	padding: 0;
+	border-radius: 3px;
+	
+}
+
+ 
+
+
+.container-calendario-filho {
+ 	padding-top: -1px;
+	height: 600px;
+/* 	border: 1px solid #B9C2C8; */
+	border-radius: 3px 0 3px 3px;
+	margin-bottom: 3em; /* Temporario */
+}
+
+.container-principal-menus {
+	height: 2.5em;
+	max-height: 2.5em;
+/* 	background-color: tomato; */
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+	border-top: 1px solid #c9d3da;
+	border-left: 1px solid #c9d3da;
+	border-right: 1px solid #c9d3da;
+	align-items: center;
+}
+
+
+
+.container-interno-menu {
+	font-size: 18px;
+/* 	background-color: #FFBE6F; */
+	
+}
+ 
+ 
+ .div-btn-anterior, .div-btn-proximo {
+ 
+ 	padding-top: 4px;
+ 	
+ }
+ 
+ .div-btn-anterior {
+/*  	background-color: #77767b; */
+	
+ 	margin-left: 160px;
+ }
+ 
+ .div-mes-atual {
+/*  	background-color: #dc8add; */
+ 	 font-size: 26px;
+  
+ }
+ 
+ 
+ 
+ .div-btn-proximo {
+/*  	background-color: #cdab8f; */
+ 	margin-right: 160px;
+ } 
+
+/* Estido do menu de meses do calendário */
+
+#botao-anterior, #botao-proximo  {
+/* 	border: 1px solid #c9d3da;	 */
+/* 	border-radius: 6px; */
+	padding: 3px 40px 3px 40px; /* Dimensionamento dos botões */
+	background-color: #085C80;   /*#77bcd8;  /* CED4D9  */
+	align-items: center;
+	color: #dfeffc;
+}
+
+
+#botao-proximo:active {
+	background-color: #084E6C;
+	color: #CAE7FF;
+}
+#botao-anterior:active {
+	background-color: #084E6C;
+	color: #CAE7FF;
+}
+
+.btn {
+	border: 0px solid #c9d3da;
+	line-height: 1.3;
+}
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.mes-atual, .ano {
+/* 	font-size: 22px; */
+	letter-spacing: 1px;
+	font-weight: bold;
+	color: #8193A3;
+/* 	background-color: #FFBE6F; */
+}
+
+ 
+
+
+
+/* Estilos do Container das Semanas */
+
+.container-principal-semanas {
+	height: 2.5em;
+    max-height: 2.5em;
+/* 	background-color: tomato; */
+	align-items: center;
+	text-align: center;
+	border-top: 1px solid #c9d3da;
+	border-left: 1px solid #c9d3da;
+	border-right: 1px solid #c9d3da;
+/* 	color: #003D73; */
+	font-weight: bold;
+	font-size: 17px;
+	color: #DF7000;
+ 
+}
+
+.s-segunda, .s-quarta, .s-sexta {
+	
+	border-left: 1px solid #c9d3da;
+	border-right: 1px solid #c9d3da;
+	
+}
+
+
+
+
+
+
+
+/* Estilo Menu Opções */
+
+.container-menu-opcoes {
+/* 	background-color: tomato; */
+	
+	
+}
+
+.grid-menu {
+/* 	margin-right: -8px; */
+	text-align: center;
+	
+}
+
+.menu-1, .menu-2, .menu-3 {
+	border-top: 1px solid #B9C2C8;
+	border-left: 1px solid #B9C2C8;
+	padding: 10px;
+	border-radius: 11px 11px 0 0;
+	background-color: #e0e4e8;
+	
+	color: #0D3C64;
+	
+	/* impedir seleção do mouse */
+	-webkit-touch-callout: none;  /* iPhone OS, Safari */
+    -webkit-user-select: none;    /* Chrome, Safari 3 */
+    -khtml-user-select: none;     /* Safari 2 */
+    -moz-user-select: none;       /* Firefox */
+    -ms-user-select: none;        /* IE10+ */
+    user-select: none;            /* Possível implementação no futuro */
+}
+
+.menu-1:hover, .menu-2:hover, .menu-3:hover {
+	cursor: pointer;
+	background-color: #d5dbe1;
+	font-weight: bold;
+/* 	transition: 0.1s; */
+}
+.menu-1:hover, .menu-2:hover, .menu-3:hover  {
+	border-top: 2px solid #DF7000;
+	margin-top: -1px;
+	transition: 0.1s;
+	
+}
+
+.menu-1 {
+/* 	background-color: #71A8B2; */
+	
+}
+
+.menu-2 {
+/* 	background-color: #9971B2; */
+}
+
+
+.menu-3 {
+/* 	background-color: #B2718E; */
+	border-right: 1px solid #B9C2C8;
+	
+}
+
+
+
+
+/* Estilo dias do calendário */
+
+.container-dias {
+/* 	margin-left: -15px; */
+/* 	margin-right: -15px; */
+	margin: 0 -15px 0 -15px; 
+/* 	border: 1px solid gray; (não pode ter borda */
+/* 	background-color: #D5FFC8; */
+	height: auto;
+	
+/* 	display: flex; */
+/* 	flex-wrap: wrap; */
+/* 	flex-direction: row; */
+/* 	justify-content: flex-start; */
+}
+
+.dia {
+	
+	
+	margin-left: -15px;
+	 width: 158.196px;
+	 max-width: 158.196px !important;
+	 height: 6.44em;
+	 list-style-type: none;
+	 
+/* 	 background-color: tomato; */
+	 
+	 padding: 0;
+	 margin-left: -15px;
+	 
+	 
+	
+}
+
+.flex-item {
+	
+	flex: 1;
+	
+} 	
+ 
+
+
+
+/* teste para calendário para tabelas */ 
+
+.container-dias table {
+	
+}
+
+.tr-s {
+	height: 8.1em;
+	max-height: 8.1em !important;
+}
+
+.tr-s td {
+	padding:  0;
+}
+
+.div-dia {
+	/* uma div com papel de um container para poder compor os elementos .dia-do-mes e .status */
+/* 	background-color: #e4f3e6; */
+    height: 128px;
+    max-height: 128px;
+    width: 9.84em;
+    max-width: 9.84em !important;
+    word-wrap: break-word;
+}
+
+
+.dia-do-mes {
+	/* div que será carregada o dia do mês pelo back-end */
+/* 	background-color: tomato; */
+	padding-left: 10px;
+	margin-bottom: 1px;
+}
+
+
+.status {
+	/* informação dos status que serão mostradas vindo do backend */
+	
+	background-color: #efbeb5;
+	font-size: 13px;
+	margin: 0.85px 6px 0 6px;
+	padding: -2px;
+	border-radius: 7px;
+	padding-left: 9px;
+}
+
+
+/* Status da reserva */ 
+
+.reservado {
+	color: white;
+	font-weight: bold;
+	background-color: #29b779;
+}
+
+.estourado {
+	background-color: #FFDD75;
+}
+
+.pendente {
+	background-color: #FF8D79;
+}
+
+
+
+/* Teste de calendário para Listas */
+
+.container-lista-ul {
+/* 	background-color: tomato; */
+
+	padding: 0;
+	padding-left: 1px;
+}
+
+ 
+
+.dia-li {
+	width: 159.4312px;	 
+    max-width: 159.4312px !important;
+    height: 104.2px;
+    max-height: 104.2px !important;
+    float: left;    
+	list-style-type: none;
+	
+/* 	background-color: lightblue; */
+	
+   	
+    border: 1px solid lightgray;
+    margin-left: -1px;	/* collapsing */
+    margin-bottom: -1px;
+}
+ 

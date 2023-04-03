@@ -1,0 +1,23 @@
+***** DETALHES IMPORTANTES DO PROJETO *****
+
+Desenvolvedor: Bruno Fernandes dos Santos
+
+
+
+
+*** Detalhe 1 ***
+
+É preciso instalar a fonte que será usada no sistema. 
+A fonte já está no projeto e seu path é /static/fonts
+
+O nome da fonte é PT Sans, família sans-serif.
+
+Tentativa de instalar via '@import' do CSS falha, 
+tentativa de instalar via link falha e tentativa também
+via link pelo 'font-faces' do CSS falhou. Até o momento
+a única forma foi instalar pelo sistema, que nos trás
+um grande desafio. Teremos que instalar ela no servidor
+também.
+
+
+Atualizado

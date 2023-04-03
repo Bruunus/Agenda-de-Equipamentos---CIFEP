@@ -1,0 +1,32 @@
+#container-calendario-template {
+    margin-top: 1.5em;
+}
+
+
+.item-barra-semanas {
+    border-bottom: 1px solid lightgrey;
+    
+    width: 8.5em;
+    margin-right: auto;
+    margin-left: auto;
+
+    text-align: center;
+    font-weight: bold;
+    color: #E77000;
+}
+
+
+.dia-do-mes {
+    width: 9.66em;
+    height: 2em;
+    margin-right: 0.85px;
+
+
+    border: 1px solid lightgrey;    
+    border-radius: 5px;
+}
+
+
+.container-ul-calendario {
+    margin-left: 10px;
+}

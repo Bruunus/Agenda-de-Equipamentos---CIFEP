@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{templates/head :: head}"></head>
+
+
+<body id="body-home2" >	
+<div th:replace="~{templates/barra-inicial-home :: barra-inicial-home}"></div>
+
+	
+
+		 
+			 
+		<div class="container" id="container-home-pai-2">
+			
+
+			<div class="row" id="container-home">
+			
+				<div class="col-12 coluna-interna-1-home2">
+					
+					<h2>Agenda de Reservas</h2>
+
+				</div>
+				
+				<div class="col-12 coluna-interna-2-home2">					
+					<nav class="navbar navbar-expand-lg navbar-light bg-light container-nav-bar">
+
+						
+
+						
+
+						
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+						  <span class="navbar-toggler-icon"></span>
+						</button>
+					  
+						<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+						  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+							<li class="nav-item active">
+								<a class="navbar-brand" href="#">Criar</a>
+							</li>
+							<li class="nav-item">
+								<a class="navbar-brand" href="#">Reservas</a>
+							</li>
+							<li class="nav-item">
+								<a class="navbar-brand" href="#">Histórico</a>
+							</li>
+						  </ul>
+						  <form class="form-inline my-2 my-lg-0">
+							<input class="form-control mr-sm-2" type="search" placeholder="Pesquisar Reservas">
+							<button class="btn btn-info my-2 my-sm-0" type="submit">Pesquisar</button>
+						  </form>
+						</div>
+					  </nav>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" >
+			<div class="row" id="container-base">
+				<div id="calendar">
+
+					<!-- Código JS -->
+
+				</div>
+			</div>
+		</div>
+		
+		<div id="teste-img">
+			
+		</div>
+
+	
+	
+	<script type="text/javascript" th:src="@{/js/jquery/jquery-3.6.1.js}"></script>
+
+	<script th:inline="javascript">
+	
+
+
+	var today = new Date();
+    var currentMonth = today.getMonth();
+    var currentYear = today.getFullYear();
+
+function renderCalendar(month, year) {
+  var calendar = document.getElementById("calendar");
+
+  // Lista de meses e dias da semana
+  var monthList = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+  var weekDays = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+
+  // Obter o primeiro dia do mês
+  var firstDay = new Date(year, month, 1);
+  var startingDay = firstDay.getDay();
+
+  // Obter o número de dias no mês
+  var monthLength = new Date(year, month + 1, 0).getDate();  
+
+  // Adiciona o cabeçalho com o nome do mês e os dias da semana
+
+
+  // Criando os buttons
+  var botao_esq = document.createElement('button');
+  botao_esq.innerHTML = 'Botão de teste';
+
+  
+  var html = "<table class='tabela'>";  // Cria a tabela do calendário
+        html += "<thead class=''>" + 
+                    "<tr class=''>" +    // primeira linha
+                        
+                        "<th colspan='7' class='table-head'>" +
+							"<div class='row container-icones-internos'>" +
+								
+								// div col 1 - com classes bootstrap imbutidas
+								"<div class='col div-btn-esq'>" +
+                            		"<button id='btn-esq' class='btn btn-sm btn-info align-middle' onclick='prevMonth()'>" + 
+										  "<span id='seta-prev'><<</span>" +
+									"</button>"+
+								"</div>" +
+
+								// div col 2
+								"<div class='col meses-ano'>" +
+                             		monthList[month] + " <span id='traco-ano'>-</span>"+year+ 
+								"</div>" +
+
+								// div col 3 - com classes bootstrap imbutidas
+								"<div class='col div-btn-dir'>" +
+                             		"<button id='btn-dir' class='btn btn-sm btn-info' onclick='nextMonth()'>" +
+										"<span id='seta-next'>>></span>" +
+									"</button>" +
+								"</div>" +
+
+							"</div>" +
+                        "</th>"+ 
+                        
+                    "</tr>" + 
+					"</thead>";
+
+
+
+           html += "<tr>";      // segunda linha
+            for (var i = 0; i < weekDays.length; i++) {
+                html += "<th class='dias_semanas_legenda'>" + weekDays[i] + "</th>";
+            }
+           html += "</tr>"+
+           
+                "</thead>";
+
+
+
+  // Adiciona os dias do mês
+  var day = 1;
+  var i;
+  var j;
+  let arrayDias = [];  // array de teste
+  for (i = 0; i < 6; i++) {
+    html += "<tr>";						/* <<- TESTA ESSE TR AQUI */
+    for (j = 0; j < 7; j++) {
+      if (i === 0 && j < startingDay) {
+        html += "<td></td>";  
+      } else if (day > monthLength) {
+        html += "<td></td>";
+      } else {
+        html += "<td class='align-top'>" +
+					"<ul class='container-ul '>" +
+						"<li class='dia '>"+day+"</li>" +
+						"<li class='dia reservas btn-primary'>Reservado</li>" +
+						"<li class='dia reservas btn-danger'></li>" +
+						"<li class='dia reservas btn-warning'></li>" +
+						"<li class='dia reservas btn-primary'></li>" +
+					"</ul>"+
+				"</td>";
+        day++;
+
+
+		arrayDias.push({mes: currentMonth, dia : day, ano : year});
+
+
+      }
+    }
+    html += "</tr>";
+  }
+  html += "</table>";
+
+
+
+  // Insere a tabela no elemento com o ID "calendar"
+  calendar.innerHTML = html;
+
+
+ 
+
+}
+
+
+  	  
+
+
+function nextMonth() {
+  currentMonth++;
+  if (currentMonth > 11) {
+    currentMonth = 0;
+    currentYear++;
+  }
+  renderCalendar(currentMonth, currentYear);
+}
+
+function prevMonth() {
+  currentMonth--;
+  if (currentMonth < 0) {
+    currentMonth = 11;
+    currentYear--;
+  }
+  renderCalendar(currentMonth, currentYear);
+}
+
+renderCalendar(currentMonth, currentYear); // Renderiza o calendário no mês atual
+
+  
+		
+	</script>
+
+
+</body>
+</html>

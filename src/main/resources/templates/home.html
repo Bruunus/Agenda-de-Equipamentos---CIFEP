@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{templates/head :: head}"></head>
+
+
+
+
+<body id="body">	
+	
+	<div th:replace="~{templates/barra-inicial-home :: barra-inicial-home}"></div>	
+	
+	
+	<div class="container">
+	<span th:text="${thymeleaf}" id="thymeleafID"></span>
+	<span id="thymeleafID"></span>
+	
+<!-- 	Teste com elemento pra ver se está vazio, pode fazer isso para fazer div vazia no calendário -->
+	<span class="spanTesteVazio">Ola</span>
+	<span>Resposta: <span class="respotateste"></span></span>
+	<br><br>
+	<button id="button-teste">Teste</button>
+	
+<!-- 	<span th:each="ms : ${meses}"></span>  -->
+<!-- 	<ul th:each="mesesAno : ${mes}"> -->
+<!--     	<li th:text="${mesesAno}"></li> -->
+<!-- 	</ul> -->
+	<br>
+	
+	
+		<!-- Menu de opções -->
+		<div class="container-fluid container-menu-opcoes">
+		
+			<div class="row justify-content-end grid-menu">
+				<div class="col-1 menu-1"><span>Criar</span></div>
+				<div class="col-1 menu-2">Reservas</div>
+				<div class="col-1 menu-3">Histórico</div>
+			</div>
+		
+		</div>
+	
+	
+	
+		<!-- Fundo -->
+		<div class="container-calendario">		 
+			 
+			<div class="container-fluid container-calendario-filho">
+						
+
+				<!-- Menu Mes -->
+				<div class="row container-principal-menus ">
+				
+					<div class="col coluna1">
+						<div class="row container-interno-menu">
+					 
+							<div class="col div-btn-anterior">								 
+								<button class="btn" id="botao-anterior">Anterior</button>								
+							</div>
+							
+							<div class="col div-mes-atual align-middle">
+								<span class="mes-atual">Fevereiro</span>
+								<span th:text="${anoAtual}" class="ano"></span>
+							</div>
+							
+							<div class="col div-btn-proximo">														
+								<button class="btn" id="botao-proximo">Próximo</button> 	
+							</div>
+							
+						</div>
+					</div>						
+				</div>
+				
+				
+			 
+			 	<!-- Semanas -->
+			 	
+			 	<div class="row container-principal-semanas">
+			 	
+			 		<div class="col s-domingo">Domingo</div>
+			 		<div class="col s-segunda">Segunda-feira</div>
+			 		<div class="col s-terca">Terça-feira</div>
+			 		<div class="col s-quarta">Quarta-feira</div>
+			 		<div class="col s-quinta">Quinta-feira</div>
+			 		<div class="col s-sexta">Sexta-feira</div>
+			 		<div class="col s-sabado">Sábado</div>			 	
+			 	
+			 	</div>
+			 	
+			 	 
+			 	
+			 					 	
+			 	<div class="row container-dias">
+					
+					
+				<ul class="container-lista-ul" id="ul-calendario">
+				
+				
+				
+				
+					<li class=" dia-li"></li>
+					<li class=" dia-li"></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+					<li class=" dia-li "></li>
+				</ul>
+					
+					
+ 
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+<!-- 					<table class="tabela table-bordered"> -->
+					
+<!-- 						<tr class="tr-s"> -->
+						
+<!-- 							<td> -->
+								
+<!-- 								<div class="div-dia"> -->
+									 
+<!-- 									 <div class="dia-do-mes">1</div> -->
+									 
+<!-- 									 <div class="status reservado">Reservado</div> -->
+<!-- <!-- 									 <div class="status reservado">Reservado</div> -->  
+<!-- 									 <div class="status estourado">Estourado</div> -->
+<!-- 									 <div class="status pendente">Pendente</div> -->
+<!-- 									 <div class="status pendente">Pendente</div> -->
+									 
+<!-- 																		<div>dia do mês (1)</div> -->
+
+<!-- 								</div> -->
+
+<!-- 							</td> -->
+							
+<!-- 							<td> -->
+								
+<!-- 								<div class="div-dia"> -->
+<!-- <!-- 									Teste Javascript -->  
+<!-- <!-- 									<div>dia do mês (1)</div> -->  
+
+<!-- 								<span class="span-teste"></span> -->
+
+<!-- 								</div> -->
+							
+							
+<!-- 							</td> -->
+							
+<!-- 							<td> -->
+								
+<!-- 								<div class="div-dia"> -->
+									
+<!-- <!-- 									<div>dia do mês (1)</div> -->  
+
+<!-- 								</div> -->
+								
+<!-- 							</td> -->
+							
+<!-- 							<td> -->
+<!-- 								<div class="div-dia"> -->
+									
+<!-- <!-- 									<div>dia do mês (1)</div> -->  
+
+<!-- 								</div> -->
+<!-- 							</td> -->
+								
+<!-- 							<td> -->
+<!-- 								<div class="div-dia"> -->
+									
+<!-- <!-- 									<div>dia do mês (1)</div> -->  
+
+<!-- 								</div> -->
+<!-- 							</td> -->
+							
+<!-- 							<td> -->
+<!-- 								<div class="div-dia"> -->
+<!-- 									asdasdsa -->
+<!-- <!-- 									<div>dia do mês (1)</div> -->  
+
+<!-- 								</div> -->
+<!-- 							</td> -->
+							
+<!-- 							<td> -->
+<!-- 								<div class="div-dia"> -->
+<!-- 									asdasdsa -->
+<!-- <!-- 									<div>dia do mês (1)</div> -->  
+
+<!-- 								</div> -->
+<!-- 							</td> -->
+							
+						
+<!-- 						</tr> -->
+						
+<!-- 						<tr class="tr-s"> -->
+						
+<!-- 							<td>teste 1</td> -->
+<!-- 							<td>teste 2</td> -->
+<!-- 							<td>teste 3</td> -->
+<!-- 							<td>teste 4</td> -->
+<!-- 							<td>teste 5</td> -->
+<!-- 							<td>teste 6</td> -->
+<!-- 							<td>teste 7</td> -->
+							
+						
+<!-- 						</tr> -->
+						
+<!-- 						<tr class="tr-s"> -->
+						
+<!-- 							<td>teste 1</td> -->
+<!-- 							<td>teste 2</td> -->
+<!-- 							<td>teste 3</td> -->
+<!-- 							<td>teste 4</td> -->
+<!-- 							<td>teste 5</td> -->
+<!-- 							<td>teste 6</td> -->
+<!-- 							<td>teste 7</td> -->
+							
+						
+<!-- 						</tr> -->
+						
+<!-- 						<tr class="tr-s"> -->
+						
+<!-- 							<td>teste 1</td> -->
+<!-- 							<td>teste 2</td> -->
+<!-- 							<td>teste 3</td> -->
+<!-- 							<td>teste 4</td> -->
+<!-- 							<td>teste 5</td> -->
+<!-- 							<td>teste 6</td> -->
+<!-- 							<td>teste 7</td> -->
+							
+						
+<!-- 						</tr> -->
+					
+					
+<!-- 					</table> -->
+					
+					<!-- Javascript aqui ! -->
+<!--  					<div class="dia "></div> 	div vazia para andar um dia   -->
+<!-- 					<div class="col-2 dia table-bordered">1</div> -->
+<!-- 					<div class="col-2 dia table-bordered">2</div> -->
+<!-- 					<div class="dia ">3</div> -->
+<!-- 					<div class="dia ">4</div> -->
+<!-- 					<div class="dia ">5</div> -->
+<!-- 					<div class="dia ">6</div> 		dia 6++ não tem borda -->
+<!-- 					<div class="dia ">7</div> -->
+<!-- 					<div class="dia ">8</div> -->
+<!-- 					<div class="dia ">9</div> -->
+<!-- 					<div class="dia ">10</div> -->
+<!-- 					<div class="dia ">11</div> -->
+<!-- 					<div class="dia">12</div>		dia 6++ não tem borda  -->
+<!-- 					<div class="dia ">13</div> -->
+<!-- 					<div class="dia ">14</div> -->
+<!-- 					<div class="dia ">15</div> -->
+<!-- 					<div class="dia ">16</div> -->
+<!-- 					<div class="dia ">17</div> -->
+<!-- 					<div class="dia ">18</div> -->
+<!-- 					<div class="dia ">19</div> -->
+<!-- 					<div class="dia ">20</div> -->
+<!-- 					<div class="dia ">21</div> -->
+<!-- 					<div class="dia ">22</div> -->
+<!-- 					<div class="dia ">23</div> -->
+<!-- 					<div class="dia">24</div> -->
+<!-- 					<div class="dia ">25</div> -->
+<!-- 					<div class="dia ">26</div> -->
+<!-- 					<div class="dia ">27</div> -->
+<!-- 					<div class="dia ">28</div> -->
+<!-- 					<div class="dia ">29</div> -->
+<!-- 					<div class="dia ">30</div> -->
+					 
+				 
+					
+
+				</div>
+				
+				
+				
+				
+				
+			</div>
+		 
+		</div>
+		
+		
+		
+		
+	</div>
+	
+	<script type="text/javascript" th:src="@{/js/jquery/jquery-3.6.1.js}"></script>
+<!-- 	<script type="text/javascript" th:src="@{/js/home/home.js}"></script> -->
+
+
+	<script th:inline="javascript">
+	
+	// 		var meses = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+		
+		// Teste
+		if($('.spanTesteVazio').is(':empty')) {
+			
+			$('.respotateste').text("Elemento Vazio");
+		} else {
+			$('.respotateste').text("Tem coteúdo");
+		}
+		
+		var meses = [  
+				
+			/*[[${mes[0]}]]*/,/*[[${mes[1]}]]*/,/*[[${mes[3]}]]*/,
+			/*[[${mes[4]}]]*/,/*[[${mes[5]}]]*/,/*[[${mes[6]}]]*/,
+			/*[[${mes[7]}]]*/,/*[[${mes[8]}]]*/,/*[[${mes[9]}]]*/,
+			/*[[${mes[10]}]]*/,/*[[${mes[11]}]]*/			
+		 
+		];
+
+		var janeiro = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,19,21,22,23,24,25,26,27,
+			28,29,30,31,32];
+
+		
+		
+		
+// 		$('#thymeleafID').text(/*[[${mes}]]*/) // modo antigo para carregar mes atual
+		
+
+		var index = 1;
+		var anterior = $('#botao-anterior');
+		var mesAtual = $('.mes-atual');
+		var proximo = $('#botao-proximo');
+		
+		var dataMes = new Date();
+		var pegaMes = dataMes.getMonth();
+		var pegaDiaDaSemana = dataMes.getDay();
+		
+		var list = $('#ul-calendario li').toArray();
+		
+		
+		
+		
+		// fazer este teste
+// 		for(let i = 0; i = meses.length; i++) {
+			
+// 			if(i == "Janeiro") {
+// 				mesAtual.text(meses[0]);	
+// 			}
+			
+			
+// 		}
+		
+		
+		 
+		/**
+		 * Função de evendo de click do botão de id botao-proximo. Realiza a leitura do 
+		 * array com limites da primeira até a décima-primeira posição. Verifica qual
+		 * a posição e, ao clicar avança para a próxima posição, caso atinja a última 
+		 * posição o botão é desabilitado dando a impressão de limite máximo.
+		 * 
+		 */
+		proximo.click(function(){		
+			
+			if(index +1 == meses.slice(0,11)) {
+				index;
+				
+				function a (){
+
+				}
+
+
+				if (index == meses[5]) {
+					console.log("Junho");
+				}
+				
+				
+				
+				
+			} else {
+				index = index + 1;				
+				anterior.prop('disabled', false);						
+				if(index == 11) {
+					proximo.attr('disabled', 'disabled')
+				}				
+			}
+			mesAtual.text(meses[index]);		
+		})
+		
+		
+		
+		/**
+		 * Função de evendo de click do botão de id botao-aterior. Realiza a leitura da 
+		 * posição atual do array e, ao clicar retrocede para a posição anterior do array, 
+		 * caso atinja a primeira posição o botão é desabilitado dando a impressão de limite 
+		 * mínimo.
+		 * 
+		 */
+		anterior.click(function(){ 			
+			if(index -1 == meses.length) {
+				index = 11;
+			} else {
+				index = index - 1;				
+					proximo.prop('disabled', false);
+				if(index == 0){
+					anterior.attr('disabled', 'disabled');				
+				}			
+			}		
+			mesAtual.text(meses[index]);	
+		})
+		
+		
+		
+		// função de teste
+		$('#button-teste').click(function() {
+			
+// 			var lista = list;
+			
+// 			if(mesAtual.text() == 'Fevereiro') {
+// 				list[2].attr('Teste');
+
+// 				$('#ul-calendario').lista[2].text("3").html();
+				
+// 			}
+				 
+				
+				
+				
+// 				for(let i=1; i <= janeiro.length; i++) {
+					
+// 					console.log(i)
+// 					$('#ul-calendario li').append("<span>"+i+"</span>")
+					
+					 
+// 				}
+				
+
+// 			}
+			
+// 			var list = $('#ul-calendario li').toArray();
+
+
+				if(pegaMes.text() == meses[1]) {  // se o mes for Fevereiro
+					$('#ul-calendario li').append("<span>"+i+"</span>")
+				}
+			console.log(list);
+		})
+		
+		
+		$(document).ready(function(){
+			
+			
+			
+		});
+
+		
+		
+	</script>
+
+
+</body>
+</html>

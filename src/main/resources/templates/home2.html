@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{templates/head :: head}"></head>
+
+
+
+
+
+<body id="body-home2" >	
+<div th:replace="~{templates/barra-inicial-home :: barra-inicial-home}"></div>
+
+	
+
+		 
+			 
+		<div class="container" id="container-home-pai-2">
+			
+
+			<div class="row" id="container-home">
+			
+				<div class="col-12 coluna-interna-1-home2">
+					
+					<h2>Calendário <span>2023</span></h2>
+
+				</div>
+				
+				<div class="col-12 coluna-interna-2-home2">					
+					<nav class="navbar navbar-expand-lg navbar-light bg-light container-nav-bar">
+
+						<!-- <a class="navbar-brand" href="#">Navbar</a> -->
+
+						<select class="form-control navbar-brand form-control-home2" id="exampleFormControlSelect1">
+							<option>Janeiro</option>
+							<option>Fevereiro</option>
+							<option>Março</option>
+							<option>Abril</option>
+							<option>Maio</option>
+							<option>Junho</option>
+							<option>Julho</option>
+							<option>Agosto</option>
+							<option>Setembro</option>
+							<option>Outubro</option>
+							<option>Novembro</option>
+							<option>Dezembro</option>
+						</select>
+
+						
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+						  <span class="navbar-toggler-icon"></span>
+						</button>
+					  
+						<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+						  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+							<li class="nav-item active">
+								<a class="navbar-brand" href="#">Criar</a>
+							</li>
+							<li class="nav-item">
+								<a class="navbar-brand" href="#">Reservas</a>
+							</li>
+							<li class="nav-item">
+								<a class="navbar-brand" href="#">Histórico</a>
+							</li>
+						  </ul>
+						  <form class="form-inline my-2 my-lg-0">
+							<input class="form-control mr-sm-2" type="search" placeholder="Pesquisar Reservas">
+							<button class="btn btn-info my-2 my-sm-0" type="submit">Pesquisar</button>
+						  </form>
+						</div>
+					  </nav>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" >
+			<div class="row" id="container-base">
+				<div th:replace="~{templates/barra-dias-da-semana :: barra-dias-semanas}"></div>
+				
+			</div>
+		</div>
+		
+		
+	
+	
+	<script type="text/javascript" th:src="@{/js/jquery/jquery-3.6.1.js}"></script>
+	<script th:inline="javascript">
+	
+		
+	</script>
+
+
+</body>
+</html>

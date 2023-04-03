@@ -1,0 +1,41 @@
+<div class="container-fluid container-calendario-filho">
+			
+				<div class="row calendario-opcoes ">
+				
+					<div class="col-8 justify-content-around"> 
+					
+						<div class="row">
+							<span class="">
+								<span class="botao-anterior">Anterior</span>
+							</span>
+							
+							<span class="">
+								<span class="mes-atual">Janeiro</span>								
+							</span>
+							
+							<span class="">
+								<span class="botao-proximo">Próximo</span></span>							 
+						</div>
+
+					</div>
+					
+					
+					
+					
+					<div class="col grade-dos-menus">
+						<span class="">Criar</span></div>
+					<div class="col grade-dos-menus">Reservas</div>
+					<div class="col grade-dos-menus">Histórico</div>
+					
+				</div>
+				
+				<div class="row calendario-semanas">
+				
+				 
+					
+				</div>
+			
+			
+				
+				 
+			</div>

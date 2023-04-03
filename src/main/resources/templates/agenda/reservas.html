@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{templates/head :: head}"></head>
+<!-- add css proprietário -->
+<link th:href="@{/css/agenda/reservas.css}" rel="stylesheet" />
+<body>
+
+	<span th:text="${mensagem}"></span>
+
+	<h1>Reservas (Reservas ativas)</h1>
+
+
+	<div th:each="reservas : ${reserva}">
+		<div><h3>Dados de teste</h3></div>
+		<div>Solicitante <span th:text="${reservas.solicitante}"></span></div>
+		<div>Setor <span th:text="${reservas.setor}"></span></div>
+		<div>Data da Reserva <span th:text="${reservas.dataDaReserva}"></span></div>
+		<div>Hora inicial <span th:text="${reservas.horaInicial}"></span></div>
+		<div>Hora final <span th:text="${reservas.horaFinal}"></span></div>
+		<div>Equipamento <span th:text="${reservas.equipamento}"></span></div>
+	</div>
+
+
+</body>
+</html>
