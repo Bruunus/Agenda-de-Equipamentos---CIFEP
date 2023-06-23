@@ -38,23 +38,11 @@
 			<groupId>org.thymeleaf.extras</groupId>
 			<artifactId>thymeleaf-extras-springsecurity5</artifactId>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client -->
-		<!--		<dependency>-->
-		<!--			<groupId>org.mariadb.jdbc</groupId>-->
-		<!--			<artifactId>mariadb-java-client</artifactId>-->
-		<!--			<version>10.6.11</version>-->
-		<!--		</dependency>-->
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.mariadb.jdbc</groupId> -->
-<!-- 			<artifactId>mariadb-java-client</artifactId> -->
-<!-- 			<scope>runtime</scope> -->
-<!-- 		</dependency> -->
-<!-- 		<dependency> -->
-<!--             <groupId>org.postgresql</groupId> -->
-<!--             <artifactId>postgresql</artifactId> -->
-<!--             <version>42.5.4</version> -->
-<!--         </dependency> -->
-		
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -71,10 +59,16 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<plugins>
-			<plugin>'					<groupId>org.springframework.boot</groupId>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>

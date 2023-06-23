@@ -1,11 +1,331 @@
 <!DOCTYPE html>
 <html  xmlns:th="http://www.thymeleaf.org">
 <head th:replace="~{templates/head :: head}"></head>
-<!-- add css proprietário -->
-<link th:href="@{/css/agenda/criar.css}" rel="stylesheet" />
-<body>
 
-<span th:text="${mensagem}"></span>
+<head>
+
+  <script th:src="@{/libs/moment.js}"></script>
+
+  
+
+  <!-- add css proprietário -->
+  <link th:href="@{/css/arquivos-html/agenda/criar.css}" rel="stylesheet" />
+
+  <!-- font-awesome -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+      
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+  <!-- datepicker styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
+
+  <link th:href="@{/css/arquivos-html/agenda/criar.css}" rel="stylesheet" />
+  <link th:href="@{/css/templates/framework-do-projeto.css}" rel="stylesheet" />
+
+
+</head>
+
+
+
+
+ <body>
+
+  <div th:replace="~{templates/barra-inicial-home :: div-barra-inicial-home}"></div>
+
+    <span th:text="${mensagem}"></span>
+
+    <!-- Formulário -->
+    <div class="container form-criar">
+
+      <div style="color:red">
+        <p>Falta fazer nesta página</p>
+        <ul>
+          <li>Troca o campo 'Setor' para um tipo select que dê para buscar o setor na pŕopria lista do select- Subir a lista de setores do servidor nessa select - Fazer isso usando uma List</li>
+          <li>Adicionar um input 'Outro setor' - Fazer um botão (span) igual ao "Outro equipamento" - para adicionar outro setor caso não tenha na lista
+              <ul>
+                <b>Validação</b>
+                <li>Ao selecionar um novo setor não pode ter um nome igual a algum setor que ja esteja na lista, o programa deve bloquear.</li>
+              </ul>
+          </li>
+          <li>
+            <ul><b>Adicionar novos campos</b>
+              <li>Adicionar um novo campo 'Ramal'</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <b>Campo Periodo</b>
+              <li>Ao selecionar um horario de Início o horário fim nas horas anteriores deve ser desabilitados caso a reserva seja para o mesmo dia.</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <b>Campo Recorrência</b>
+              <li><b>checkbox 'Anual' -> Ao ser habilitado o checkbox 'Opçoes' deve ficar totalmente desabilitado.</b></li>
+              <li><b>checkbox 'Opçoes' -> Ao ser habilitado o checkbox 'Anual' deve ficar totalmente desabilitado.</b></li>
+            </ul>
+          </li>
+          <li>            
+            <ul>
+              <b>Equipamentos</b>
+              <li>
+                Ao adicionar um novo equipamento, caso seja adicionado o mesmo equipamento o sistema deve notificar ao operador que o mesmo equipamento está sendo adicionado 2x.
+                O mesmo será para o campo Outro Equiamento também 
+              </li>
+            </ul>
+          </li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
+      
+      <div class="titulo-form">
+        <b>Criar Reserva</b>
+      </div>
+      
+
+      <div class="container-form">
+
+        <form id="formulario_reserva" method="POST">
+          <h5 class="subtitulo-form">Definição de Período</h5>
+          <div class="form-group row">
+  
+            <label for="staticEmail" class="col-sm-2 col-form-label">Responsável</label>
+            <div class="col-sm-10 espacamento-form">  
+              <input id="colaborador" class="form-control" type="text" placeholder="Colaborador" >
+            </div>
+            <label for="staticEmail" class="col-sm-2 col-form-label">Setor</label>
+            <div class="col-sm-10 espacamento-form">  
+              <input id="setor" class="form-control" type="text" placeholder="Setor" >
+            </div>
+
+
+
+
+
+  
+            <label for="staticEmail" class="col-sm-2 col-form-label">Data Início</label>
+            <div class="col-sm-10">  
+              <div class="form-group mb-4 confi-datepicker-form-criar">
+                <div class="datepicker date input-group">
+                  <input id="dataDaReserva" type="text" placeholder="Dia, mês e ano" class="form-control" >
+
+                  <div class="input-group-append">
+                    <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+            <label for="staticEmail" class="col-sm-2 col-form-label">Data Fim</label>
+            <div class="col-sm-10">
+              <div class="form-group mb-4 confi-datepicker-form-criar">
+                <div class="datepicker date input-group">
+                  <input type="text" placeholder="Dia, mês e ano" class="form-control" id="dataFimDaReserva">
+
+                  <div class="input-group-append">
+                    <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            
+    
+
+
+            <label for="staticEmail" class="col-sm-2 col-form-label">Período</label>
+            <div class="col-sm-10">
+              <div class="row espacamento-form">
+  
+                <div class="col-auto">
+                  <label for="staticEmail" class="col-sm-2 col-form-label">Início</label>
+                  <select  id="periodoInicio" class="form-control">
+                    <option value="" selected></option>
+                    <option value="07:00">07:00</option>
+                    <option value="08:00">08:00</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                  </select>
+                </div>
+  
+                <div class="col-auto">
+                  <label for="staticEmail" class="col-sm-2 col-form-label">Final</label>
+                  <select  id="periodoFim" class="form-control">
+                    <option value="" selected></option>
+                    <option value="07:00">07:00</option>
+                    <option value="08:00">08:00</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Session Recorrência -->            
+            <label for="staticEmail" class="col-sm-2 col-form-label mt-2">Recorrência</label>
+            
+            <div class="col-sm-10 espacamento-form">  
+              <div class="custom-control custom-checkbox altura-checkbox-form">
+
+                <div class="row espacamento-form">
+
+                  <div class="col-auto">
+                    <input  type="checkbox" class="custom-control-input" id="marcacao-anual">
+
+                    <label class="custom-control-label icone-checkbox mt-2" for="marcacao-anual">Anual</label>
+                  </div>
+
+                  <div class="col-auto posicao-caixa-select ml-n2">
+                    <select  id="caixa-de-selecao-anual" class="form-control" disabled>
+                      <option value="SEGUNDA_FEIRA" selected>Segunda-feira</option>
+                      <option value="TERCA_FEIRA">Terça-feira</option>
+                      <option value="QUARTA_FEIRA">Quarta-feira</option>
+                      <option value="QUINTA_FEIRA">Quinta-feira</option>
+                      <option value="SEXTA_FEIRA">Sexta-feira</option>
+                      <option value="SABADO">Sábado</option>
+                      <option value="DOMINGO">Domingo</option>
+                    </select>
+                  </div>
+
+                </div>
+                </div>
+            </div>
+
+            <!--  -->
+            <div class="col-sm-10 espacamento-form form-op-personalizado">  
+              <div class="custom-control custom-checkbox altura-checkbox-form">
+
+                <div class="row espacamento-form ">
+
+                  <div class="col-auto">    
+                    <input  id="marcacao-personalizado" type="checkbox" class="custom-control-input" >
+
+                    <label class="custom-control-label icone-checkbox mt-2 " for="marcacao-personalizado">
+                      Opções
+                    </label>
+
+                  </div>
+
+
+                  <div class="col-auto posicao-caixa-select ml-n2">
+                    <select  id="caixa-de-selecao-personalizado" class="form-control" disabled>
+                      <option value="UMA_VEZ_POR_MES" selected>1 vez ao mês</option>
+                      <option value="TODOS_OS_DIAS" selected>Todos os dias</option>
+                      <option value="A_CADA_15_DIAS">A cada 15 dias</option>
+                    </select>
+                  </div>
+
+                </div>
+                
+                <div class="sessao-dia" style="display: none;">div-opções</div>
+
+                </div>
+            </div>
+            
+
+
+
+          </div>
+
+          <h5 class="subtitulo-form">Equipamentos</h5>
+
+
+            <div style="border: 1px solid lightgrey;">
+                <select id="select-equipamentos" >
+                  <option value=""></option>
+                  <option value="DATASHOW">Datashow</option>
+                  <option value="NOTEBOOK">Notebook</option>
+                  <option value="EXTENSAO">Extensão</option>
+                </select>
+
+                <select name="" id="quantidadeDeItem">
+                  <option value=""></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+                <span tabindex="0" id="botaoAdicionarEquipamento">Adicionar</span>
+
+
+                <span id="areaCaixaDeTextoAddOutroEquipamento"></span>
+                <span tabindex="0" id="btnAdicionarOutro">Outro Equipamento</span>
+
+                
+                
+            </div>
+
+
+            <div id="mostrarReservas">
+              <!-- Equipamentos adicionados aqui via JS -->
+            </div>
+
+
+
+
+          
+          <div class="row">
+            <div class="col container-button-submit">
+              <button class="btn btn-primary button-submit" id="btn_form" type="button">Reservar</button>
+            </div>
+          </div>
+
+
+
+        </form>
+      
+  
+      </div>    
+    </div>
+
+
+
+
+
+<script type="text/javascript" th:src="@{/js/jquery/jquery-3.6.1.js}"></script>
+
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<!-- Datepicker -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+
+<script th:inline="javascript">
+  // para variáveis thymeleaf
+
+  
+
+
+   
+</script>
+
+<script type="text/javascript" th:src="@{/js/agenda/criar.js}"></script>
 
 </body>
 </html>

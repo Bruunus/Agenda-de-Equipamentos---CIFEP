@@ -1,0 +1,7 @@
+Parei no momento de aplicar o thymeleaf dentro do formulário de criar reserva.
+Estava adicionando dentro de cada input e select a tag de binding do thymelead 'th:field="*{atribulo}'
+
+Parei na parte dos equipamentos. O dilema é: Não sei se ao adicionar o field no input de cada
+equipamento é pra ser o enum "NOTEBOOK" porque na ReservaDTO eles estão como lista.
+
+

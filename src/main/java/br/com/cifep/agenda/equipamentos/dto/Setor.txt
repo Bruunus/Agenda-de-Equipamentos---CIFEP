@@ -1,0 +1,172 @@
+package br.com.cifep.agenda.equipamentos.dto;
+
+public enum Setor {
+
+	AGENCIA_TRANSFUSIONAL_2D("Agência Transfusional 2ºD"),
+	ALMOXARIFADO_CENTRAL("Almoxarifado Central"),
+	ALMOXARIFADO_FARMACIA_SUBSOLO("Almoxarifado Farmácia Subsolo"),
+	ALMOXARIFADO_ORTESE_E_PROTESE("Almoxarifado Ortese e Protese"),
+	ALMOXARIFADO_MANUTENCAO("Almoxarifado Manutenção"),
+	AMBULATORIO_DE_ESPECIALIDADES_SUS_I("Ambulatório de Especialidades SUS I"), 
+	AMBULATORIO_DE_ESPECIALIDADES_SUS_II("Ambulatório de Especialidades SUS II"),
+	AME("AME"),
+	Arquivo Central
+	Arquivo Hospitalar
+	Auditoria Convênio
+	Banco de Sangue Externo  
+	Berçário - 6º Andar
+	Bolsão
+	Brinquedoteca 1ºA
+	Caldeira
+	Captação de Órgãos
+	Captação de Recursos
+	Casa de Pedra
+	Casa Missão Anawim
+	Casa Emaus
+	CDA Convênio
+	Ceclub
+	CEI Santa Marcelina
+	Central de Equipamentos Médicos - CEM
+	Central de Guias Convênio
+	Central de Notas
+	Central de Relacionamento  
+	Central de Laudos
+	Centro Cirúrgico  
+	Central de Ar Condicionado
+	Centro Cirúrgico - Arsenal 4º andar
+	Centro Cirúrgico - Bloco Operatório - Coordenação
+	Centro Cirúrgico - Bloco Operatório - Posto de Enfermagem (Aquário)
+	Centro Cirúrgico - Cardio/ Oftalmo/ Vascular - 4º andar
+	Centro Cirúrgico - CCPS
+	Centro Cirúrgico - Copa - 4º andar
+	Centro Cirúrgico - Enfermaria Dia
+	Centro Cirúrgico - Otorrino/GO/CG - 4º andar
+	Centro Cirúrgico - Posto de Enfermagem - Aquário
+	Centro Cirúrgico - Recuperação Anestésica - RPA
+	Centro Cirúrgico - Sala da Neuro - 4º andar
+	Centro Cirúrgico - Sala da Uro - 4º andar
+	Centro Cirúrgico - Sala dos Anestesistas - 4º andar
+	Centro de Promoções - ARCUSS
+	Centro Obstétrico
+	Centro para Crianças e Adolescentes - CCA
+	Centro para Juventude - CJ
+	Cifep 
+	CME
+	Comercial Convênio
+	Comissão de Epidemiologia Hospitalar – Enfermagem – CCIH
+	Comissão de Epidemiologia Hospitalar – Núcleo de Vigilância Epidemiológica
+	Comissão de Epidemiologia Hospitalar – SCIH - Médicos
+	Comitê de Ética e Pesquisa - CEP
+	Compras
+	Comunicação
+	Contabilidade
+	Costura
+	Diretoria Médica
+	Endoscopia Convênio
+	Endoscopia SUS
+	Engenharia Clinica
+	Engenharia de Segurança do Trabalho
+	Farmácia - 2º Andar
+	Farmácia - 3º Andar
+	Farmácia - 5º Andar
+	Farmácia - Centro Cirúrgico
+	Farmácia - Hemodiálise
+	Farmácia - Ortopedia Convênio
+	Farmácia - Pediatria 1º B
+	Farmácia - Pronto Socorro Convênio
+	Farmácia - Pronto Socorro Infantil
+	Farmácia - PS 1
+	Farmácia - PS 2
+	Farmácia - Psicotrópicos
+	Farmácia - Quimioterapia
+	Farmácia - Recebimento
+	Farmácia - Saneantes
+	Faturamento Convênio
+	Faturamento SUS
+	Financeiro
+	Fisioterapia Hospitalar 3ºA
+	Fonoaudiologia
+	Gerencia de Apoio
+	Gestão de Pessoas
+	Gestão de Pessoas - Recepção
+	Gestão de Pessoas - Admissão
+	Gestão de Pessoas - Afastamento
+	Gestão de Pessoas - Controle de Frequência
+	Gestão de Pessoas - Desenvolvimento
+	Gestão de Pessoas - Gestão
+	Gestão de Pessoas - Movimentação
+	Gestão de Pessoas – Valorização
+	Gestão Estratégica da Enfermagem
+	Hematologia 2ºD
+	Hematologia Convênio 2ºC
+	Hemodiálise
+	Hemodinâmica
+	Higiene e Limpeza
+	Hotelaria - Sala das Camareiras - 5º andar
+	Laboratório 
+	Lavanderia
+	Mamografia
+	Manutenção
+	Medicina Nuclear
+	Movimentação de Pessoas
+	Necrotério
+	Nefrologia – 2ºC
+	NIR Convênio
+	NIR SUS
+	OPME
+	Pastoral
+	Patrimônio
+	Presidência
+	Pronto Socorro – Convênio
+	Pronto Socorro – SUS
+	Pronto Socorro Adulto - I - Sala Vermelha
+	Pronto Socorro Adulto - II - Sala Amarela
+	Pronto Socorro Adulto - III - Sala Verde
+	Psicologia Hospitalar
+	Qualidade
+	Quimioterapia
+	Radiologia  
+	Radioterapia
+	Recursos e Glosas
+	Rede de Apoio
+	Residência das Irmãs - Bethânia
+	Residência das Irmãs - N.S Divino Pranto
+	Ressonância Magnética
+	SAC - Ouvidoria
+	Segurança Patrimonial
+	Serviço de Nutrição
+	Serviço Social
+	Setor Estratégico
+	SPO Convênio
+	SPO SUS 
+	Telefonia 
+	TI - Tecnologia da Informação
+	Tomografia
+	Transplante de Medula Óssea
+	Transplante Renal - 2ºC Posto de Enfermagem
+	Transporte
+	Ultrassonografia 
+	Unidade AVC
+	UTI Adulto
+	UTI Neonatal
+	UTI Pediátrica
+	UTI SUS e Convênio
+	Valorização de Pessoas
+	Vestiário
+
+	
+	private String nome;
+	
+	Setor(String nome) {
+		this.nome = nome;
+	}
+	
+	public String getNome() {
+        return nome;
+    }
+	
+	@Override
+	public String toString() {
+		return nome;
+	}
+}

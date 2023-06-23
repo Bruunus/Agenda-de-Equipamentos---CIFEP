@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+/* Configurações para todas as páginas */
+
+
+/**** Tipografias do Projeto ****/
+
+body {
+	 
+	 font-family: "PT Sans", sans-serif; 
+/* 	 background-color: lightgreen; */
+}
+
+
+
+
+
+
+
+
+
+/**** Para Formulários ****/
+
+
+/**
+*   Framework compondo a estrutura essencial para iniciar um formulário bootstrap
+*/
+.form-criar {
+    min-height: 1em;
+    margin-bottom: 3em;
+    padding: 0px;    
+    border: 1px solid lightgrey;
+    border-radius: 15px 15px 0px 0px;
+}
+
+
+
+/**
+*   Título para formulários padrão do projeto contendo espaçamentos 
+*/
+.titulo-form {
+    margin-bottom: 1em; 
+    padding-top: 15px; 
+    padding-bottom: 15px; 
+    text-align: center; 
+    border-top-left-radius: 13px 14px; 
+    border-top-right-radius: 13px 14px; 
+    border-color: #004680;
+    color: white; 
+    background-color: #004680;
+    /* impedir seleção do mouse */
+    -webkit-touch-callout: none;  /* iPhone OS, Safari */ 
+    -webkit-user-select: none;    /* Chrome, Safari 3 */
+    -khtml-user-select: none;     /* Safari 2 */ 
+    -moz-user-select: none;       /* Firefox */
+    -ms-user-select: none;        /* IE10+ */ 
+    user-select: none;  /* Possível implementação no futuro */
+}
+
+
+
+
+
+/**
+*   Botões do sistema
+* 
+*   Atenção: É necessário importar este .css no documento .html direto 
+* 
+*   Será usado o btn-primary do bootstrap
+*   O código está comentado em bootstrap.css na linha 2507
+*/
+.btn-primary{
+    color: #fff;
+    background-color: #004680;
+    border-color: #004680;
+  }
+  
+  .btn-primary:hover {
+    color: #fff;
+    background-color: #005FB3 ;  
+    border-color: #005FB3 ;  
+  }
+  
+  .btn-primary:focus, .btn-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  }
+  
+  .btn-primary.disabled, .btn-primary:disabled {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+  .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #0058A6; 
+    border-color: #0058A6;
+  }
+  
+  .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  }
+
+
+
+
+
+
+
+

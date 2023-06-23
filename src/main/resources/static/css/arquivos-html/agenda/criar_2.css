@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+
+
 .container {
     max-width: 789px !important;
     padding-right: 0px; 
@@ -58,54 +60,6 @@
     margin-left: 1.3em;
 }
 
-
-
-
-
-
-
-
-#btnAdicionarOutro, #botaoAdicionarEquipamento {
-    background-color: lightblue;
-    padding: 0.2em 0.5em;
-    border: 0.5px solid gray;
-    border-radius: 4px;
-    /* impedir seleção do mouse */
-    -webkit-touch-callout: none;  /* iPhone OS, Safari */ 
-    -webkit-user-select: none;    /* Chrome, Safari 3 */
-    -khtml-user-select: none;     /* Safari 2 */ 
-    -moz-user-select: none;       /* Firefox */
-    -ms-user-select: none;        /* IE10+ */ 
-    user-select: none;  /* Possível implementação no futuro */
-}
-
-#btnAdicionarOutro:hover, #botaoAdicionarEquipamento:hover {
-    background-color: rgb(169, 211, 224);
-    cursor: pointer;
-}
-
-#btnAdicionarOutro:active, #botaoAdicionarEquipamento:active {
-    background-color: rgb(143, 198, 216);
-}
-
-
-
-
-
-
-
-#mostrarReservas {
-    border: 1px solid lightgrey;
-    background-color: lightgoldenrodyellow;
-    width: 47.33em;
-    height: 86px;
-    margin-top: 5px;
-    padding: 5px;
-}
-
-
-
-
 .container-col-form {
     max-width: 29em !important;
 }
@@ -122,11 +76,6 @@
 .margin-outros-equipamentos {
     margin-left: -14px;
 }
-
-
-
-
-
 
 .container-button-submit {
     text-align: center;
